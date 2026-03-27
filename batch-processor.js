@@ -4,7 +4,8 @@ const axios = require('axios');
 const FormData = require('form-data');
 
 const PDF_DIR = path.join(__dirname, 'pdfs_to_process');
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const API_URL = process.env.API_URL || 'http://localhost:5000';
+
 
 async function processPDFFiles() {
   if (!fs.existsSync(PDF_DIR)) {
@@ -48,10 +49,10 @@ async function processPDFFiles() {
           // Dynamically extract Department from Roll No (e.g., 23/CH/323 -> CH)
           let branchCode = "UNKNOWN";
           if (student.rollno && student.rollno.includes('/')) {
-              const parts = student.rollno.split('/');
-              if (parts.length > 1) {
-                  branchCode = parts[1].toUpperCase();
-              }
+            const parts = student.rollno.split('/');
+            if (parts.length > 1) {
+              branchCode = parts[1].toUpperCase();
+            }
           }
 
           // Dynamically guess Semester from Filename
@@ -66,25 +67,25 @@ async function processPDFFiles() {
 
           // Send to the Database Upload API
           await axios.post(`${API_URL}/api/results`, {
-             rollno: student.rollno,
-             name: student.name,
-             department: branchCode,
-             semesters: [
-               {
-                 semesterNumber: semNum,
-                 sgpa: student.sgpa,
-                 credits: student.totalCredits,
-                 failedCourses: student.failedCourses,
-                 courses: student.courses
-               }
-             ]
+            rollno: student.rollno,
+            name: student.name,
+            department: branchCode,
+            semesters: [
+              {
+                semesterNumber: semNum,
+                sgpa: student.sgpa,
+                credits: student.totalCredits,
+                failedCourses: student.failedCourses,
+                courses: student.courses
+              }
+            ]
           });
           savedCount++;
         } catch (dbErr) {
           console.error(`   ❌ Failed to save RollNo: ${student.rollno}`);
         }
       }
-      
+
       console.log(`✅ Completed: Saved ${savedCount}/${studentsData.length} students to MongoDB for ${file}`);
 
     } catch (err) {
