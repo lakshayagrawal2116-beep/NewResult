@@ -1,0 +1,56 @@
+{
+  "results": {
+    "rollno": "24/EE/018",
+    "name": "ADDARSH KUMAR YADAV",
+    "department": "EE",
+    "sgpa": 0.55,
+    "credits": 2,
+    "failedCourses": [
+      "EE201n",
+      "EE203n",
+      "EE205n",
+      "EE207n",
+      "EE209n"
+    ],
+    "courses": [
+      {
+        "courseCode": "EE201n",
+        "courseName": "",
+        "credits": 0,
+        "grade": "F"
+      },
+      {
+        "courseCode": "EE203n",
+        "courseName": "",
+        "credits": 0,
+        "grade": "F"
+      },
+      {
+        "courseCode": "EE205n",
+        "courseName": "",
+        "credits": 0,
+        "grade": "F"
+      },
+      {
+        "courseCode": "EE207n",
+        "courseName": "",
+        "credits": 0,
+        "grade": "F"
+      },
+      {
+        "courseCode": "EE209n",
+        "courseName": "",
+        "credits": 0,
+        "grade": "F"
+      },
+      {
+        "courseCode": "MS299n",
+        "courseName": "",
+        "credits": 0,
+        "grade": "B"
+      }
+    ],
+    "gradesStr": "EE201n: F | EE203n: F | EE205n: F | EE207n: F | EE209n: F | MS299n: B"
+  },
+  "errors": []
+}

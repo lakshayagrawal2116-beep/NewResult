@@ -1,0 +1,248 @@
+/* ═══ Bulk Operations ═══ */
+.admin-bulk {
+  max-width: 1100px;
+}
+
+/* Filters */
+.bulk-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.bulk-filter-group {
+  flex: 1;
+  min-width: 180px;
+}
+
+.bulk-filter-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.4rem;
+}
+
+.bulk-filter-group select {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.bulk-filter-group select:focus {
+  border-color: var(--accent-cyan);
+}
+
+.bulk-filter-group select option {
+  background: var(--bg-card);
+}
+
+/* Summary */
+.bulk-summary {
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.bulk-summary-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.bulk-summary-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.bulk-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.bulk-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(51, 65, 85, 0.3);
+  border-radius: 0.75rem;
+  color: var(--accent-cyan);
+}
+
+.bulk-stat div {
+  display: flex;
+  flex-direction: column;
+}
+
+.bulk-stat-val {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+.bulk-stat-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Department breakdown chips */
+.bulk-dept-breakdown h3 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.5rem;
+}
+
+.bulk-dept-chips {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.bulk-dept-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.85rem;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: 2rem;
+  font-size: 0.85rem;
+}
+
+.chip-name {
+  font-weight: 600;
+  color: #60a5fa;
+}
+
+.chip-count {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+/* Actions */
+.bulk-actions-section {
+  margin-top: 0.5rem;
+}
+
+.bulk-actions-section h2 {
+  font-size: 1.15rem;
+  margin-bottom: 0.25rem;
+}
+
+.bulk-actions-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+}
+
+.bulk-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.bulk-action-card {
+  padding: 1.5rem;
+  background: rgba(30, 41, 59, 0.4);
+  border-radius: 1rem;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.bulk-action-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.bulk-action-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.bulk-action-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.action-warn {
+  border-color: rgba(245, 158, 11, 0.2);
+}
+
+.action-warn .bulk-action-header {
+  color: #f59e0b;
+}
+
+.action-danger {
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.action-danger .bulk-action-header {
+  color: #f87171;
+}
+
+.action-info {
+  border-color: rgba(59, 130, 246, 0.2);
+}
+
+.action-info .bulk-action-header {
+  color: #60a5fa;
+}
+
+.bulk-action-card .btn-danger,
+.bulk-action-card .btn-primary {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.bulk-action-card .btn-danger:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.bulk-action-note {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .bulk-filters {
+    flex-direction: column;
+  }
+  .bulk-actions-grid {
+    grid-template-columns: 1fr;
+  }
+}

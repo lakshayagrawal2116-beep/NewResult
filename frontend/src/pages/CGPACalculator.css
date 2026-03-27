@@ -1,0 +1,45 @@
+/* CGPA Calculator specific columns */
+.col-sno-cgpa {
+  width: 40px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.col-sem-cgpa {
+  flex: 2;
+}
+
+.col-sgpa-cgpa {
+  flex: 1.5;
+}
+
+.col-credits-cgpa {
+  flex: 1.5;
+}
+
+.col-action-cgpa {
+  width: 60px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .col-sno-cgpa {
+    display: none;
+  }
+  
+  .col-sem-cgpa {
+    flex: 100%;
+  }
+  
+  .col-sgpa-cgpa, .col-credits-cgpa {
+    flex: 1;
+    min-width: 120px;
+  }
+  
+  .col-action-cgpa {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+}
