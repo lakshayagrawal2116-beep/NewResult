@@ -3,10 +3,11 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 
+// Load environment variables BEFORE importing routes
+dotenv.config();
+
 const resultRoutes = require('./routes/resultRoutes');
 const adminRoutes = require('./routes/adminRoutes');
-// Load environment variables
-dotenv.config();
 
 const app = express();
 

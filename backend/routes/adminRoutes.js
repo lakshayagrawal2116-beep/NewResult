@@ -8,9 +8,9 @@ const path = require('path');
 const fs = require('fs');
 
 // ─── Config ──────────────────────────────────────────────
-const JWT_SECRET = process.env.JWT_SECRET || 'admin-portal-secret-key-2024';
-const ADMIN_USERNAME = process.env.ADMIN_USERNAME || 'admin';
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'admin123';
+const JWT_SECRET = (process.env.JWT_SECRET || '').trim();
+const ADMIN_USERNAME = (process.env.ADMIN_USERNAME || '').trim();
+const ADMIN_PASSWORD = (process.env.ADMIN_PASSWORD || '').trim();
 
 // ─── Multer for CSV uploads ──────────────────────────────
 const storage = multer.diskStorage({
