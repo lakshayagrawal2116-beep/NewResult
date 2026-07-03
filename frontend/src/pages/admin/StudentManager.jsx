@@ -19,7 +19,7 @@ function StudentManager() {
   const navigate = useNavigate();
   const token = localStorage.getItem('adminToken');
 
-  const departments = ['all', 'CSE', 'EC', 'ME', 'CE', 'SE', 'PE', 'EE','EP','BT','EN','AE','MCE'];
+  const departments = ['all', 'CSE','IT', 'EC', 'ME', 'CE', 'SE', 'PE', 'EE','EP','BT','EN','AE','MCE'];
   const years = ['all', '2026', '2027', '2028', '2029'];
 
   const fetchStudents = useCallback(async (page = 1) => {
