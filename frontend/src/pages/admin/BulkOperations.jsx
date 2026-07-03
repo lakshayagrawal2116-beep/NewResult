@@ -20,7 +20,7 @@ function BulkOperations() {
   const navigate = useNavigate();
   const token = localStorage.getItem('adminToken');
 
-  const departments = ['all', 'CSE', 'ECE', 'ME', 'CE', 'SE', 'PE', 'EE'];
+  const departments = ['all', 'CSE','IT', 'ECE', 'ME', 'CE', 'SE', 'PE', 'EE','EP','BT','EN','AE','MCE'];
   const years = ['all', '2026', '2027', '2028', '2029'];
   const semesters = ['', '1', '2', '3', '4', '5', '6', '7', '8'];
 
